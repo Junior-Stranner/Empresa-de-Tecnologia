@@ -65,13 +65,15 @@ public class Principal {
 
 				Desenvolvedores.remove(dev);
 
-				if(op == 1) {
+			 if(op == 1) {
 					System.out.println(dev.getNome()+" Saiu da Empresa ! ");
 				}else if(op == 2) {
 					System.out.println(dev.getNome()+" Foi Demitido/a !");
 				}
 			}
+			
 		}
+		
 	}
 
 	private static void alterarSalarioPorHora(ArrayList<Desenvolvedor> Desenvolvedores) {
@@ -138,8 +140,6 @@ public class Principal {
 			if(dev.getId() == id) {
 
 				if(dev.getHoraTotalTrabalhadas() > 252 && dev.getHoraTotalTrabalhadas() < 280) {
-					/*nvSalario = dev.getSalario() * 1.10;
-					dev.setSalario(nvSalario)*/
 					dev.setSalario(dev.getSalario() * 1.10);
 					System.out.println( dev.getNome()+" seu Salario com  10% do Salario : "+dev.getSalario());
 				}else {
@@ -173,7 +173,7 @@ public class Principal {
 	}
 
 	private static void mostrarDados(ArrayList<Desenvolvedor> Desenvolvedores) {
-		//	double salarioNvo = cargosDisponiveis(Funcionarios);
+		
 
 		System.out.println("\n ======================= \n Desenvolvedor Cadastrado \n ======================= \n");
 
@@ -205,16 +205,14 @@ public class Principal {
 		nome = lerString.nextLine();
 
 		System.out.print(" cargo : "+cargo);
-		//	cargo = lerString.nextLine();
-
+		
 		System.out.print(" \n Salario por hora : ");
 		salPorHora = Double.parseDouble(lerDouble.nextLine());
 
-		System.out.print(" Horas total Trabalhadas : ");
+		System.out.print(" Horas total Trabalhadas (por mês): ");
 		horaTotalTrabalhadas = Double.parseDouble(lerDouble.nextLine());
 
 		System.out.print(" Salario : "+salario);
-		//salario = Double.parseDouble(lerDouble.nextLine());
 
 
 		System.out.println("\n -------------------------------");
